@@ -1,0 +1,19 @@
+func toGem() {
+	moveForward()
+	collectGem()
+	moveForward()
+	collectGem()
+}
+
+collectGem()
+toGem()
+turnRight()
+toGem()
+turnRight()
+toGem()
+turnRight()
+moveForward()
+collectGem()
+turnRight()
+moveForward()
+collectGem()

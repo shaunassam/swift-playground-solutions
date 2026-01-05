@@ -1,0 +1,16 @@
+func gemSwitch() {
+	moveForward()
+	collectGem()
+	moveForward()
+	toggleSwitch()
+	moveForward()
+}
+
+gemSwitch()
+turnLeft()
+gemSwitch()
+moveForward()
+turnLeft()
+gemSwitch()
+turnLeft()
+gemSwitch()

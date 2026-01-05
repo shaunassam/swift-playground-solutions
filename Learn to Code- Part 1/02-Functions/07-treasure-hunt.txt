@@ -1,0 +1,30 @@
+func turnAround() {
+  turnLeft()
+  turnLeft()
+}
+
+func moveThenToggle() {
+  moveForward()
+  moveForward()
+  toggleSwitch()
+}
+
+func jumpAhead2() {
+  moveForward()
+  moveForward()
+}
+
+moveThenToggle()
+turnAround()
+jumpAhead2()
+moveThenToggle()
+turnAround()
+jumpAhead2()
+turnLeft()
+moveThenToggle()
+moveThenToggle()
+turnAround()
+jumpAhead2()
+jumpAhead2()
+moveThenToggle()
+moveThenToggle()

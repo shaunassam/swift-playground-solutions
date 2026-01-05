@@ -1,0 +1,28 @@
+var gemCounter = 0
+var switchCounter = 0
+
+while !isBlocked {
+    moveForward()
+    if isBlocked && isBlockedLeft {
+        turnRight()
+    }
+    if isBlocked && isBlockedRight {
+        turnLeft()
+    }
+    if isOnGem {
+        collectGem()
+        gemCounter += 1
+    }
+    if isOnClosedSwitch {
+        let numSwitches = gemCounter
+        toggleSwitch()
+        switchCounter += 1
+        if switchCounter == numSwitches {
+            break
+        } else {
+            continue
+        }
+    }
+}
+
+

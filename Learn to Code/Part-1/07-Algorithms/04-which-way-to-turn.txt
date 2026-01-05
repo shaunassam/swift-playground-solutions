@@ -1,0 +1,24 @@
+func goAround() {
+    if isOnClosedSwitch && !isBlocked {
+        toggleSwitch()
+        turnRight()
+        moveForward()
+    }
+    if isOnClosedSwitch && isBlocked {
+        toggleSwitch()
+        turnLeft()
+        moveForward()
+    }
+}
+
+func checkGem() {
+    if isOnGem {
+        collectGem()
+    }
+}
+
+while !isBlocked {
+    moveForward()
+    checkGem()
+    goAround()
+}

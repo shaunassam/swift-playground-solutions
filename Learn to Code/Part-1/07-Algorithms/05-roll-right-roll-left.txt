@@ -1,0 +1,30 @@
+func checkGem() {
+    if isOnGem {
+        collectGem()
+    }
+}
+
+func checkSwitch() {
+    if isOnClosedSwitch {
+        toggleSwitch()
+    }
+}
+
+func checkTurn() {
+    if isBlocked && isBlockedLeft && !isBlockedRight {
+        turnRight()
+    }
+    else if isBlocked && isBlockedRight && !isBlockedLeft {
+        turnLeft()
+    }
+    else if isBlocked && !isBlockedLeft && !isBlockedRight {
+        turnLeft()
+    }
+}
+
+while !isBlocked {
+    moveForward()
+    checkGem()
+    checkSwitch()
+    checkTurn()
+}

@@ -1,0 +1,16 @@
+while !isBlocked {
+    while !isOnClosedSwitch {
+        moveForward()
+        if isBlocked {
+            turnRight()
+        }
+        if isBlocked && isBlockedLeft && isBlockedRight {
+            turnLeft()
+            break
+        }
+    }
+    if isOnClosedSwitch {
+        toggleSwitch() 
+        break
+    }
+}

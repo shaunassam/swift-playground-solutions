@@ -1,0 +1,27 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+for i in 1 ... 7 {
+    moveForward()
+    if isOnGem && isBlockedLeft {
+        turnRight()
+        moveForward()
+        moveForward()
+        if isBlocked && isOnClosedSwitch {
+            toggleSwitch()
+            turnAround()
+            moveForward()
+            moveForward()
+            turnRight()
+        } else {
+            turnAround()
+            moveForward()
+            turnRight()
+        }
+    }
+    if isOnGem {
+        collectGem()
+    }
+}

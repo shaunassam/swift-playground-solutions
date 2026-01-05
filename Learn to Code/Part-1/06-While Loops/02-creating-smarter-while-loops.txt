@@ -1,0 +1,11 @@
+for i in 1 ... 3 {
+    moveForward()
+
+    while isOnOpenSwitch || isOnClosedSwitch{
+        if isOnClosedSwitch {
+            toggleSwitch()
+        } else {
+            moveForward()
+        }
+    }
+}

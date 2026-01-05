@@ -1,0 +1,21 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+func jump2() {
+    moveForward()
+    moveForward()
+}
+
+func toggleTheSwitch() {
+    jump2()
+    toggleSwitch()
+    turnAround()
+    jump2()
+    turnRight()
+}
+
+for i in 1 ... 4 {
+    toggleTheSwitch()
+}

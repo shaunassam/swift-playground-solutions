@@ -1,0 +1,46 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+func goAroundWall() {
+    if isBlocked && isBlockedRight && !isBlockedLeft {
+        turnLeft()
+        moveForward()
+    }
+    if isBlocked && !isBlockedRight && isBlockedLeft {
+        turnRight()
+        moveForward()
+    }
+    if isBlocked && isBlockedRight && isBlockedLeft {
+        turnAround()
+        moveForward()
+        turnLeft()
+        moveForward()
+        if isBlocked {
+            turnRight()
+            moveForward()
+        }
+    }
+    if isBlocked {
+        turnLeft()
+        moveForward()
+        if isBlocked {
+            turnAround()
+            moveForward()
+            moveForward()
+            moveForward()
+            turnRight()
+            moveForward()
+        }
+    }    
+}
+
+while !isBlocked {
+    moveForward()
+    goAroundWall()
+}
+
+if isOnGem {
+    collectGem()
+}

@@ -1,0 +1,30 @@
+func jump2() {
+    moveForward()
+    moveForward()
+}
+
+func jumpRow() {
+    jump2()
+    jump2()
+    jump2()
+    moveForward()
+}
+
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+func activateSwitch() {
+    jump2()
+    turnRight()
+    jumpRow()
+    toggleSwitch()
+    turnAround()
+    jumpRow()
+    turnRight()
+}
+
+for i in 1 ... 3 {
+    activateSwitch()
+}

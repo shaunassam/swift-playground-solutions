@@ -1,0 +1,33 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+func collectOffGem() {
+    turnRight()
+    moveForward()
+    moveForward()
+    collectGem()
+    turnAround()
+    moveForward()
+    moveForward()
+    turnRight()
+}
+
+for i in 1 ... 8 {
+    moveForward()
+    if isOnGem && isOnClosedSwitch{
+        collectGem()
+        toggleSwitch()
+        if isBlockedLeft {
+            collectOffGem()
+        }
+    } else if isOnGem {
+        collectGem()
+    } else if isOnClosedSwitch {
+        toggleSwitch()
+        turnLeft()
+    } else if isBlocked {
+        turnLeft()
+    }
+}

@@ -1,0 +1,33 @@
+func collectOrToggle() {
+    if isOnClosedSwitch {
+        toggleSwitch()
+    } else if isOnGem {
+        collectGem()
+    }
+}
+
+func jump2() {
+    moveForward()
+    moveForward()
+}
+
+for i in 1 ... 4 {
+    moveForward()
+    collectOrToggle()
+}
+
+turnLeft()
+jump2()
+collectOrToggle()
+turnLeft()
+jump2()
+collectOrToggle()
+jump2()
+collectOrToggle()
+turnRight()
+moveForward()
+turnRight()
+jump2()
+collectOrToggle()
+jump2()
+collectOrToggle()

@@ -1,0 +1,15 @@
+moveForward()
+
+func checkSwitch() {
+    moveForward()
+    if isOnClosedSwitch {
+        toggleSwitch()
+    }
+}
+
+for i in 1 ... 3 {
+    checkSwitch()
+}
+
+
+

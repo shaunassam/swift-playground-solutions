@@ -1,0 +1,25 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+func navigateAroundWall() {
+    if isBlockedRight {
+        moveForward()
+    }  else {
+        turnRight()
+        moveForward()
+    }
+}
+    
+while !isOnGem {
+    navigateAroundWall()
+    if isOnGem {
+        collectGem()
+        turnAround()
+    }
+    if isOnClosedSwitch {
+        toggleSwitch()
+        break
+    }
+}

@@ -1,0 +1,37 @@
+func checkSwitches() {
+    while isOnOpenSwitch || isOnClosedSwitch {
+        if isOnClosedSwitch {
+            toggleSwitch()
+            moveForward()
+        } else if isOnOpenSwitch {
+            moveForward()
+        }
+    }
+    if isBlocked && isBlockedLeft && !isBlockedRight {
+        turnRight()
+        moveForward()
+    }
+}
+
+func checkGems() {
+    while isOnGem {
+        if isOnGem {
+            collectGem()
+            moveForward()
+        } else {
+            moveForward()
+        }
+    }
+}
+
+moveForward()
+checkSwitches()
+moveForward()
+turnRight()
+moveForward()
+checkSwitches()
+turnRight()
+moveForward()
+checkGems()
+
+

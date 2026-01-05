@@ -1,0 +1,35 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+
+func downStairs() {
+    moveForward()
+    moveForward()
+    collectGem()
+    turnAround()
+    moveForward()
+    moveForward()
+    turnLeft()
+    moveForward()
+}
+
+func checkLeft() {
+    turnLeft()
+    moveForward()
+    if !isBlocked {
+        downStairs()
+    } else {
+        turnRight()
+    }
+}
+
+moveForward()
+for i in 1 ... 4 {
+    if isOnGem {
+        collectGem()
+        moveForward()        
+    } else {
+        checkLeft()
+    }
+}

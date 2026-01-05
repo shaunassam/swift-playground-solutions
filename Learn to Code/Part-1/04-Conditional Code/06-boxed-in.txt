@@ -1,0 +1,15 @@
+func collectGemSwitch() {
+    if isOnGem {
+        collectGem()
+    } else if isOnClosedSwitch {
+        toggleSwitch()
+    } 
+}
+
+for i in 1 ... 9 {
+    moveForward()
+    collectGemSwitch()
+    if isBlocked {
+            turnLeft()
+        }
+}
